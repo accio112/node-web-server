@@ -57,6 +57,12 @@ app.get('/bad', (req,res)=>{
     errorMessage: 'Unable to send data'
     });
 });
+
+app.get('/project', (req,res)=>{
+   res.render('project.hbs', {
+       message: 'Portfolio'
+});
+});
 app.listen(port, () =>{
     console.log(`server is up on port ${port}`);
 });
